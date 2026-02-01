@@ -1,0 +1,25 @@
+# LeetCode 4: Median of Two Sorted Arrays
+# Difficulty: Hard
+# Time Complexity: O((m + n) log (m + n))
+# Space Complexity: O(m + n)
+# Approach: Brute Force (Merge + Sort)
+
+
+class Solution(object):
+    def findMedianSortedArrays(self, nums1, nums2):
+        a = nums1 + nums2
+        b = sorted(a)
+        l = len(b)
+        p = (b[l // 2] + b[l // 2 - 1])
+        if l % 2 == 0:
+            return p / 2.0
+        else:
+            return b[(l - 1) // 2]
+
+
+
+        
+        
+
+        
+        
